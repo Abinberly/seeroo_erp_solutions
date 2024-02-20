@@ -24,7 +24,7 @@ class SinglePreview extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               boxShadow: [
-                BoxShadow(color: AppColor.primaryBlue),
+                BoxShadow(color: AppColor.whites),
               ],
             ),
             child: const Text('16/01/2024'),
