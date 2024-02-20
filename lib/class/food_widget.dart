@@ -4,3 +4,11 @@ class FoodWidget {
 
   FoodWidget({required this.item, required this.dropdown});
 }
+
+class DayWidget{
+  final String day;
+
+  DayWidget({required this.day});
+}
+
+
