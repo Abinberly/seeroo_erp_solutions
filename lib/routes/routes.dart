@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:seeroo_erp/features/bottom_nav/bottom_nav.dart';
-import 'package:seeroo_erp/features/food_booking/single_day_booking/reservation.dart';
+import 'package:seeroo_erp/features/food_booking/single_day_booking/single_reservation.dart';
 import 'package:seeroo_erp/features/home/home.dart';
 
 class Routes {
@@ -13,8 +13,8 @@ class Routes {
   static String getBottomRoute() => bottom;
 
   static List<GetPage> routes = [
-    GetPage(name: home, page: () => HomePage()),
-    GetPage(name: bottom, page: () => BottomSheetPage()),
-    GetPage(name: singleReservation, page: () => SingleReservation())
+    GetPage(name: home, page: () => const HomePage()),
+    GetPage(name: bottom, page: () => const BottomSheetPage()),
+    GetPage(name: singleReservation, page: () => const SingleReservation())
   ];
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seeroo_erp/routes/routes.dart';
+import 'package:seeroo_erp/theme/strings/strings.dart';
 import '../../../foundation/fab/fab.dart';
 
 class WeeklyBooking extends StatefulWidget {
@@ -13,6 +14,7 @@ class _WeeklyBookingState extends State<WeeklyBooking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text(Strings.food),),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -27,7 +29,7 @@ class _WeeklyBookingState extends State<WeeklyBooking> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 100, 
             child: FABButton(
               navigationLoc: Routes.home, 

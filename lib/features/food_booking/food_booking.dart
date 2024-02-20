@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seeroo_erp/features/food_booking/monthly_booking/monthly_booking.dart';
 import 'package:seeroo_erp/features/food_booking/single_day_booking/single_day_booking.dart';
 import 'package:seeroo_erp/features/food_booking/weekly_booking/weekly_booking.dart';
-import 'package:seeroo_erp/features/home/home.dart';
+import 'package:seeroo_erp/theme/strings/strings.dart';
 
 class FoodBooking extends StatefulWidget {
   const FoodBooking({super.key});
@@ -18,7 +18,7 @@ class _FoodBookingState extends State<FoodBooking> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Food Booking'),
+          title: const Text(Strings.food),
           automaticallyImplyLeading: false,
           bottom: const TabBar(
             tabs: <Widget>[

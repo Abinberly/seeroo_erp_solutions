@@ -24,21 +24,21 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Row(
                   children: [
-                    Expanded(child: Text('data')),
+                    const Expanded(child: Text('data')),
                     InkWell(
-                      child: CircleImage(assetname: 'assets/images/login1.png', radius: 20),
+                      child: const CircleImage(assetname: 'assets/images/login1.png', radius: 20),
                       onTap: () {
-                        Get.to(() => ProfilePage());
+                        Get.to(() => const ProfilePage());
                       },
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Container(
                   height: 100, // Set a fixed height for horizontal ListView
                   child: ListView.separated(
-                    itemBuilder: (context, index) => QuickLook(),
-                    separatorBuilder: (context, index) => SizedBox(width: 10),
+                    itemBuilder: (context, index) => const QuickLook(),
+                    separatorBuilder: (context, index) => const SizedBox(width: 10),
                     itemCount: 3,
                     scrollDirection: Axis.horizontal,
                   ),

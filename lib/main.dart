@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import './features/bottom_nav/bottom_nav.dart';
-import 'features/home/home.dart';
-import 'features/profile/profile.dart';
 import 'routes/routes.dart';
 
 void main() {
@@ -25,6 +22,5 @@ class MyApp extends StatelessWidget {
       initialRoute: Routes.getBottomRoute(),
       getPages: Routes.routes,
     );
-    // home: FoodBooking());
   }
 }

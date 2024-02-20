@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:seeroo_erp/theme/colors/colors.dart';
 
 import '../../class/food_widget.dart';
 
 class SingleBookingCard extends StatefulWidget {
-  SingleBookingCard({super.key});
+  const SingleBookingCard({super.key});
 
   @override
   State<SingleBookingCard> createState() => _SingleBookingCardState();
 }
 
 class _SingleBookingCardState extends State<SingleBookingCard> {
-  String _selectedval = "";
+  // String _selectedval = "";
 
   List<FoodWidget> food = [
     FoodWidget(item: 'Breakfast', dropdown: ['Idili/Sambar', '--NA-']),

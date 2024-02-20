@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seeroo_erp/theme/strings/strings.dart';
 
 import '../../../foundation/fab/fab.dart';
 import '../../../routes/routes.dart';
@@ -14,6 +15,7 @@ class _MonthlyBookingState extends State<MonthlyBooking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text(Strings.food),),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -37,6 +39,5 @@ class _MonthlyBookingState extends State<MonthlyBooking> {
         ],
       ),
     );
-
   }
 }
