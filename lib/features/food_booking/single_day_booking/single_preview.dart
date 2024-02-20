@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:seeroo_erp/foundation/single_booking_card/single_preview_card.dart';
 import 'package:seeroo_erp/theme/colors/colors.dart';
 import 'package:seeroo_erp/theme/strings/strings.dart';
 
@@ -28,7 +29,8 @@ class SinglePreview extends StatelessWidget {
               ],
             ),
             child: const Text('16/01/2024'),
-          )
+          ),
+          SinglePreviewCard()
         ],
       ),
     );
