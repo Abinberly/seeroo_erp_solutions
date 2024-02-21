@@ -6,7 +6,6 @@ import 'package:seeroo_erp/features/bottom_nav/bottom_nav.dart';
 class LoginController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
   void login() {
     // Perform login logic here
     String email = emailController.text;
