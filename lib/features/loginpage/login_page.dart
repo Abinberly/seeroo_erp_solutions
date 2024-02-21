@@ -29,7 +29,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const CarouselSliderWidget(imageAssetPaths: CarouselImages.loginImages),
-              const SizedBox(height: 10),
+              const SizedBox(height: 25),
           
               CustomTextFormField(
               controller: loginController.emailController,

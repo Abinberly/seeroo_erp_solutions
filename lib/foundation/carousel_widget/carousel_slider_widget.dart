@@ -1,6 +1,7 @@
 // CarouselSliderWidget.dart
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 
 class CarouselSliderWidget extends StatelessWidget {
@@ -28,10 +29,10 @@ class CarouselSliderWidget extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.symmetric(horizontal: 5.0),
               decoration: BoxDecoration(
-                color: Colors.grey,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Image.asset(
+              child: SvgPicture.asset(
                 path,
                 fit: BoxFit.cover,
               ),
