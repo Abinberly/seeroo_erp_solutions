@@ -8,3 +8,12 @@ class Strings {
   static const String date = 'Date';
     
 }
+
+// carousel_images.dart
+class CarouselImages {
+  static const List<String> loginImages = [
+    'assets/images/login1.png',
+    'assets/images/login2.png',
+  ];
+}
+

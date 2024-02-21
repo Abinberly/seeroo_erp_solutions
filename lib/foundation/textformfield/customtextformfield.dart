@@ -5,6 +5,8 @@ class CustomTextFormField extends StatelessWidget {
   final String labelText;
   final bool obscureText;
   final bool showBorder;
+  final IconData? prefixIcon;
+  final String? Function(String?)? validator;
 
   const CustomTextFormField({
     Key? key,
@@ -12,6 +14,9 @@ class CustomTextFormField extends StatelessWidget {
     required this.labelText,
     this.obscureText = false,
     this.showBorder = true,
+    this.prefixIcon,
+    this.validator,
+    
   }) : super(key: key);
 
   @override
@@ -21,8 +26,11 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         border: showBorder ? const OutlineInputBorder() : InputBorder.none,
+        prefixIcon: prefixIcon != null? Icon(prefixIcon) : null,
+        
       ),
       obscureText: obscureText,
+      validator: validator,
     );
   }
 }
