@@ -5,6 +5,8 @@ import 'package:seeroo_erp/features/food_booking/weekly_booking/weekly_reservati
 import 'package:seeroo_erp/features/home/home.dart';
 import 'package:seeroo_erp/features/loginpage/login_page.dart';
 
+import '../features/bottom_nav/bottom_nav_page.dart';
+
 class Routes {
   static const String home = '/';
   static const String profile = '/profile';
@@ -23,9 +25,14 @@ class Routes {
   
   static List<GetPage> routes = [
     GetPage(name: home, page: () => const HomePage()),
+<<<<<<< HEAD
+    GetPage(name: bottom, page: () =>  BottomNavPage()),
+    GetPage(name: singleReservation, page: () => const SingleReservation())
+=======
     GetPage(name: bottom, page: () => const BottomSheetPage()),
     GetPage(name: singleReservation, page: () => const SingleReservation()),
     GetPage(name: weeklyReservation, page: () => const WeeklyReservation()),
     GetPage(name: login, page: () => LoginPage())
+>>>>>>> f17c62394093cbac8a6e85acaf74a30476ef23c2
   ];
 }
