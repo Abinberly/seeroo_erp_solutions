@@ -31,7 +31,7 @@ class _WeeklyBookingState extends State<WeeklyBooking> {
           const SizedBox(
             height: 100, 
             child: FABButton(
-              navigationLoc: Routes.home, 
+              navigationLoc: Routes.weeklyReservation, 
             ),
           ),
         ],

@@ -5,8 +5,9 @@ class QuickLook extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
-      child: Card(
+    return  Container(
+      width: MediaQuery.of(context).size.width/4,
+      child: const Card(
         child: Column(
           children: [
             Text(
