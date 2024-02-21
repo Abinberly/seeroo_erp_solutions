@@ -14,7 +14,6 @@ class BottomNav extends StatelessWidget {
       horizontal: Get.width * 0.008, vertical: Get.height * 0.008);
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return Obx(() {
       return Padding(
         padding: EdgeInsets.symmetric(
@@ -69,46 +68,7 @@ class BottomNav extends StatelessWidget {
            color: bottomNavController.tabIndex.value == index ? AppColor.whites : AppColor.greys, 
           ),
       text: text,
-      padding: padding,
-=======
-    return Scaffold(
-      body: _pages[currentState],
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 5,
-        
-        currentIndex: currentState,
-        onTap: (newIndex) {
-          setState(() {
-            currentState = newIndex;
-          });
-        },
-        unselectedItemColor: AppColor.greys,
-        selectedItemColor: AppColor.primaryBlue,
-        items: [
-          BottomNavigationBarItem(
-              icon: SPIcon(
-                  assetname: 'home_icon.png',
-                  isSelected: 0 == currentIndex),
-              label: Strings.home),
-          BottomNavigationBarItem(
-              icon: SPIcon(
-                  assetname: 'project_icon.png', isSelected: 1 == currentIndex),
-              label: Strings.projects),
-          BottomNavigationBarItem(
-              icon:
-                  SPIcon(assetname: 'time_icon.png', isSelected: 2 == currentIndex),
-              label: Strings.timesheet),
-              BottomNavigationBarItem(
-              icon:
-                  SPIcon(assetname: 'dine_icon.png', isSelected: 3 == currentIndex),
-              label: Strings.food),
-              // BottomNavigationBarItem(
-              // icon:
-              //     SPIcon(assetname: 'menu_icon.png', isSelected: 4 == currentIndex),
-              // label: Strings.menu)
-        ],
-      ),
->>>>>>> f17c62394093cbac8a6e85acaf74a30476ef23c2
+      padding: padding,    
     );
   }
 }
