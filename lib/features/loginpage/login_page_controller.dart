@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:seeroo_erp/features/bottom_nav/bottom_nav.dart';
- 
+import '../bottom_nav/bottom_nav_page.dart'; 
 
 class LoginController extends GetxController {
   TextEditingController emailController = TextEditingController();

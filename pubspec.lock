@@ -333,7 +333,6 @@ packages:
     description:
       name: path
       sha256: "087ce49c3f0dc39180befefc60fdb4acd8f8620e5682fe2476afd0b3688bb4af"
-<<<<<<< HEAD
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
@@ -393,11 +392,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.4"
-=======
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.9.0"
->>>>>>> f17c62394093cbac8a6e85acaf74a30476ef23c2
   plugin_platform_interface:
     dependency: transitive
     description:
