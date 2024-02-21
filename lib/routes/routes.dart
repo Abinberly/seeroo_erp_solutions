@@ -11,16 +11,13 @@ class Routes {
   static const String bottom = '/bottom';
   static const String singleReservation = '/singleReservation';
   static const String weeklyReservation = '/weeklyReservation';
+      static const String login = '/login';
+
 
   static String getHomeRoute() => home;
   static String getBottomRoute() => bottom;
   static String getSingleRoute() => singleReservation;
   static String getWeeklyRoute() => weeklyReservation;
-    static const String login = '/login';
-
-
-  static String getHomeRoute() => home;
-  static String getBottomRoute() => bottom;
   static String getLoginRoute() => login;
 
   
@@ -28,7 +25,7 @@ class Routes {
     GetPage(name: home, page: () => const HomePage()),
     GetPage(name: bottom, page: () => const BottomSheetPage()),
     GetPage(name: singleReservation, page: () => const SingleReservation()),
-    GetPage(name: weeklyReservation, page: () => const WeeklyReservation())
+    GetPage(name: weeklyReservation, page: () => const WeeklyReservation()),
     GetPage(name: login, page: () => LoginPage())
   ];
 }
