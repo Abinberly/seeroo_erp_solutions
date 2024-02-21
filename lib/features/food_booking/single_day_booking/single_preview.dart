@@ -48,7 +48,7 @@ class SinglePreview extends StatelessWidget {
             SPSolidButton(
                 btntext: Strings.submit,
                 onpressed: () {
-                  Get.to(() => const BottomSheetPage());
+                  Get.to(() => const BottomNavPage());
                 })
           ],
         ),
