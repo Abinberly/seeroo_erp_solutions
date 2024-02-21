@@ -16,6 +16,6 @@ class LoginController extends GetxController {
     print("Password: $password");
 
     // After successful login, navigate to another screen
-    Get.to(BottomSheetPage());
+    Get.to(BottomNavPage());
   }
 }
