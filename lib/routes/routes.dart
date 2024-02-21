@@ -25,14 +25,9 @@ class Routes {
   
   static List<GetPage> routes = [
     GetPage(name: home, page: () => const HomePage()),
-<<<<<<< HEAD
     GetPage(name: bottom, page: () =>  BottomNavPage()),
-    GetPage(name: singleReservation, page: () => const SingleReservation())
-=======
-    GetPage(name: bottom, page: () => const BottomSheetPage()),
     GetPage(name: singleReservation, page: () => const SingleReservation()),
     GetPage(name: weeklyReservation, page: () => const WeeklyReservation()),
     GetPage(name: login, page: () => LoginPage())
->>>>>>> f17c62394093cbac8a6e85acaf74a30476ef23c2
   ];
 }
