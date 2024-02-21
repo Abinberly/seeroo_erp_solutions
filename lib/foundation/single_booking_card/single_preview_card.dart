@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SinglePreviewCard extends StatefulWidget {
   const SinglePreviewCard({super.key});
@@ -10,43 +11,52 @@ class SinglePreviewCard extends StatefulWidget {
 class _SinglePreviewCardState extends State<SinglePreviewCard> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Card(
-        child: Column(
-          children: [
-            GridView.count(
-              crossAxisSpacing: 1,
-              mainAxisSpacing: 2,
-              crossAxisCount: 3,
-              children: const <Widget>[
-                Text('Meals'),
-                Text('Food Item'),
-                Text('Amount'),
-                Text('Breakfast'),
-                Text('Idli/Sambar'),
-                Text(' 30'),
-                Text('Lunch'),
-                Text('Meals/Fish'),
-                Text(' 60'),
-                Text('Dinner'),
-                Text('Kanji'),
-                Text(' 30'),
+    return Card(
+      child: Column(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: DataTable(
+              columns: const <DataColumn>[
+                DataColumn(label: Text('Meals')),
+                DataColumn(label: Text('Food Item')),
+                DataColumn(label: Text('Amount')),
+              ],
+              rows: const <DataRow>[
+                DataRow(cells: <DataCell>[
+                  DataCell(Text('Breakfast')),
+                  DataCell(Text('Idli/Sambar')),
+                  DataCell(Text('30')),
+                ]),
+                DataRow(cells: <DataCell>[
+                  DataCell(Text('Lunch')),
+                  DataCell(Text('Meals/Fish')),
+                  DataCell(Text('60')),
+                ]),
+                DataRow(cells: <DataCell>[
+                  DataCell(Text('Dinner')),
+                  DataCell(Text('Kanji')),
+                  DataCell(Text('30')),
+                ]),
               ],
             ),
-            const SizedBox(
-              height: 12.0,
+          ),
+          const SizedBox(height: 12.0),
+          Divider(
+            height: 1,
+            color: Colors.grey[400],
+            thickness: 1,
+          ),
+          const SizedBox(height: 12.0),
+          const Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Total: 120',
+              textAlign: TextAlign.end,
             ),
-            Divider(
-              height: 1,
-              color: Colors.grey[400],
-              thickness: 1,
-            ),
-            const SizedBox(
-              height: 12.0,
-            ),
-            Text('Total: 120')
-          ],
-        ),
+          ),
+          const SizedBox(height: 12.0),
+        ],
       ),
     );
   }

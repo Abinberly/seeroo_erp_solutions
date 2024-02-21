@@ -33,9 +33,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Container(
-                  height: 100, // Set a fixed height for horizontal ListView
+                  height: 75,
                   child: ListView.separated(
                     itemBuilder: (context, index) => const QuickLook(),
                     separatorBuilder: (context, index) => const SizedBox(width: 10),

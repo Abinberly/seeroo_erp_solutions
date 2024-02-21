@@ -52,7 +52,7 @@ class _BottomSheetPageState extends State<BottomSheetPage> {
           BottomNavigationBarItem(
               icon:
                   SPIcon(assetname: 'time_icon.png', isSelected: 2 == currentIndex),
-              label: Strings.timestamp),
+              label: Strings.timesheet),
               BottomNavigationBarItem(
               icon:
                   SPIcon(assetname: 'dine_icon.png', isSelected: 3 == currentIndex),
