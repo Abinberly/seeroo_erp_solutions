@@ -5,7 +5,7 @@ import 'package:seeroo_erp/foundation/sp_solid_button/sp_solid_button.dart';
 import 'package:seeroo_erp/theme/colors/colors.dart';
 import 'package:seeroo_erp/theme/strings/strings.dart';
 
-import '../../bottom_nav/bottom_nav.dart';
+import '../../bottom_nav/bottom_nav_page.dart';
 
 class SinglePreview extends StatelessWidget {
   const SinglePreview({super.key});
@@ -48,7 +48,7 @@ class SinglePreview extends StatelessWidget {
             SPSolidButton(
                 btntext: Strings.submit,
                 onpressed: () {
-                  Get.to(() => const BottomNavPage());
+                  Get.to(() => BottomNavPage());
                 })
           ],
         ),
