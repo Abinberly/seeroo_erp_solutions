@@ -11,4 +11,22 @@ class DayWidget{
   DayWidget({required this.day});
 }
 
-
+class WeeklyWidget{
+    String day, breakfast, lunch, dinner;
+    
+    WeeklyWidget({
+        required this.day, 
+        required this.breakfast, 
+        required this.lunch, 
+        required this.dinner
+    });
+    //constructor
+    factory WeeklyWidget.fromJSON(Map json){
+        return WeeklyWidget( 
+          day: json["day"],
+          breakfast: json["breakfast"],
+          lunch: json["lunch"],
+          dinner: json["dinner"]
+        );
+    } 
+}
