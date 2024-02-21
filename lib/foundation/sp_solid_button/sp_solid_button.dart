@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../../theme/colors/colors.dart';
 
 class SPSolidButton extends StatelessWidget {
@@ -9,14 +10,18 @@ class SPSolidButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        onPressed: onpressed,
-        style: const ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(AppColor.primaryBlue)),
-        child: Container(
-            width: MediaQuery.of(context).size.width,
-            child: Text(btntext,
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: AppColor.whites))));
+    return SizedBox(
+      height: 50,
+      width: double.maxFinite,
+      child: ElevatedButton(
+          onPressed: onpressed,
+          style:  ButtonStyle(
+              backgroundColor:const MaterialStatePropertyAll(AppColor.primaryBlue), shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ), ),
+          child: Text(btntext,
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: AppColor.whites))),
+    );
   }
 }

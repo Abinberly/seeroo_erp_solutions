@@ -14,7 +14,6 @@ class _WeeklyBookingState extends State<WeeklyBooking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(Strings.food),),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -32,7 +31,7 @@ class _WeeklyBookingState extends State<WeeklyBooking> {
           const SizedBox(
             height: 100, 
             child: FABButton(
-              navigationLoc: Routes.home, 
+              navigationLoc: Routes.weeklyReservation, 
             ),
           ),
         ],

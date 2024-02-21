@@ -15,8 +15,12 @@ dependencies:
   get: ^4.6.6
   intl: ^0.19.0
   snippet_coder_utils: ^1.0.15
+<<<<<<< HEAD
   google_fonts: ^6.1.0
   google_nav_bar: ^5.0.6
+=======
+  carousel_slider: ^4.2.1
+>>>>>>> f17c62394093cbac8a6e85acaf74a30476ef23c2
 
 dev_dependencies:
   flutter_test:

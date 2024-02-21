@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: BottomSheetPage());
-      initialRoute: Routes.getBottomRoute(),
+      initialRoute: Routes.getLoginRoute(),
       getPages: Routes.routes,
     );
   }
