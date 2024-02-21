@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:seeroo_erp/features/bottom_nav/bottom_nav.dart';
- // assuming HomeScreen is in home_screen.dart
+ 
 
 class LoginController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
   void login() {
     // Perform login logic here
     String email = emailController.text;
