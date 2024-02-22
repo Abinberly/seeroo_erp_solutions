@@ -41,11 +41,11 @@ class AddLeaveRequestForm extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: DateField(),
+                        child: DateField(titleDate: 'From',),
                       ),
                       SizedBox(width: 10),
                       Expanded(
-                        child: DateField(),
+                        child: DateField(titleDate: 'To',),
                       ),
                     ],
                   ),
@@ -66,7 +66,7 @@ class AddLeaveRequestForm extends StatelessWidget {
                   SizedBox(height: 20), // Adjust spacing as needed
                   SPSolidButton(
                     btntext: 'Save',
-                    onpressed: () => {controller.submitLeaveRequest()},
+                    onpressed: () => {controller.submitLeaveRequest()}, btnwidth: Get.width*0.2,
                   ),
                 ],
               ),

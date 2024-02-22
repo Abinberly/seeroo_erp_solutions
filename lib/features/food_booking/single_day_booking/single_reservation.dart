@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:seeroo_erp/features/food_booking/single_day_booking/single_preview.dart';
 import 'package:seeroo_erp/foundation/date_field/date_field.dart';
@@ -31,7 +32,7 @@ class _SingleReservationState extends State<SingleReservation> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const DateField(),
+                const DateField(titleDate: Strings.date,),
                 const SizedBox(
                   height: 15.0,
                 ),
@@ -39,11 +40,14 @@ class _SingleReservationState extends State<SingleReservation> {
                 const SizedBox(
                   height: 15.0,
                 ),
-                SPSolidButton(
-                  btntext: Strings.next,
-                  onpressed: () {
-                    Get.to(() => const SinglePreview());
-                  },
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: SPSolidButton(
+                    btntext: Strings.next,
+                    onpressed: () {
+                      Get.to(() =>  SinglePreview());
+                    }, btnwidth: MediaQuery.of(context).size.width/4,
+                  ),
                 )
               ],
             ),

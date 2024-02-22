@@ -7,6 +7,8 @@ class Strings {
   static const String next = 'NEXT';
   static const String date = 'Date';
   static const String submit = 'SUBMIT';
+   static const String fromdate = 'From Date';
+    static const String todate = 'To Date';
     
 }
 

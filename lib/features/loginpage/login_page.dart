@@ -53,7 +53,7 @@ class LoginPage extends StatelessWidget {
                       // Validation successful, proceed with login
                       loginController.login();
                     }
-               })
+               }, btnwidth: MediaQuery.of(context).size.width,)
               
             ],
           )
