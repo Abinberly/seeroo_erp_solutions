@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:seeroo_erp/features/food_booking/weekly_booking/weekly_preview.dart';
 import 'package:seeroo_erp/foundation/date_field/date_field.dart';
@@ -57,12 +58,15 @@ class _WeeklyReservationState extends State<WeeklyReservation> {
                 const SizedBox(
                   height: 15.0,
                 ),
-                SPSolidButton(
-                  btntext: Strings.next,
-                  onpressed: () {
-                    Get.to(() => const WeeklyPreview());
-                  },
-                  btnwidth: MediaQuery.of(context).size.width / 4,
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: SPSolidButton(
+                    btntext: Strings.next,
+                    onpressed: () {
+                      Get.to(() => const WeeklyPreview());
+                    },
+                    btnwidth: MediaQuery.of(context).size.width / 4,
+                  ),
                 )
               ],
             ),
