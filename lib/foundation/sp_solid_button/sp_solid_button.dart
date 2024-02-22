@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import '../../theme/colors/colors.dart';
 
 class SPSolidButton extends StatelessWidget {
   const SPSolidButton({super.key, required this.btntext, required this.onpressed});
   final String btntext;
-  
   final Function() onpressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 45,
       width: double.maxFinite,
       child: ElevatedButton(
           onPressed: onpressed,

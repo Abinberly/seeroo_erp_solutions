@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:seeroo_erp/features/profile/leave/my_leave_request/views/my_leave_request.dart';
 
 import '../../theme/colors/colors.dart';
 
@@ -13,7 +15,7 @@ class ProfileButtonCard extends StatelessWidget {
       color: AppColor.whites,
       child: Card(
         child: InkWell(
-          onTap: () {},
+          onTap: () {Get.to(MyLeaveRequestPage());},
           child: Container(
             padding: const EdgeInsets.only(left: 15, right: 10),
             width: MediaQuery.of(context).size.width,
