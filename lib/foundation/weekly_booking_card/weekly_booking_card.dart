@@ -6,56 +6,93 @@ class WeeklyBookingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List foodlist = []; //list of names, you can generate it using JSON as well
-    foodlist.add(WeeklyWidget(
-        day: "Day", breakfast: "Breakkast", lunch: "Lunch", dinner: "Dinner"));
+    // List<WeeklyTitle> weeklyTitle = [];
+    // foodlist.add(WeeklyWidget(
+    //     day: "Day",
+    //     breakfast: ['Breakkast'],
+    //     lunch: ["Lunch"],
+    //     dinner: ["Dinner"]));
+
+    List<WeeklyWidget> foodlist = [];
+    //  foodlist.add(WeeklyWidget(
+    //     day: "Day",
+    //     breakfast: ['Breakkast'],
+    //     lunch: ["Lunch"],
+    //     dinner: ["Dinner"]));
     foodlist.add(WeeklyWidget(
         day: "Monday",
-        breakfast: "Idli/Sambar",
-        lunch: "Address 1",
-        dinner: "Phone 1"));
+        breakfast: ['Breakkast'],
+        lunch: ["Lunch"],
+        dinner: ["Dinner"]));
     foodlist.add(WeeklyWidget(
         day: "Tuesday",
-        breakfast: "Idli/Sambar",
-        lunch: "Address 1",
-        dinner: "Phone 1"));
+        breakfast: ['Breakkast'],
+        lunch: ["Lunch"],
+        dinner: ["Dinner"]));
     foodlist.add(WeeklyWidget(
         day: "Wednesday",
-        breakfast: "Idli/Sambar",
-        lunch: "Address 1",
-        dinner: "Phone 1"));
+        breakfast: ['Breakkast'],
+        lunch: ["Lunch"],
+        dinner: ["Dinner"]));
     foodlist.add(WeeklyWidget(
         day: "Thursday",
-        breakfast: "Idli/Sambar",
-        lunch: "Address 1",
-        dinner: "Phone 1"));
+        breakfast: ['Breakkast'],
+        lunch: ["Lunch"],
+        dinner: ["Dinner"]));
     foodlist.add(WeeklyWidget(
         day: "Friday",
-        breakfast: "Idli/Sambar",
-        lunch: "Address 1",
-        dinner: "Phone 1"));
+        breakfast: ['Breakkast'],
+        lunch: ["Lunch"],
+        dinner: ["Dinner"]));
     return Card(
       child: Table(
-        border: TableBorder.all(width: 1, color: Colors.black45),
+        border:
+            TableBorder.all(width: 0, color: const Color.fromARGB(0, 0, 0, 0)),
         children: foodlist.map((WeeklyWidget) {
-          return TableRow(//return table row in every loop
-              children: [
-            //table cells inside table row
+          return TableRow(children: [
+            // TableRow(children: Text('Day'), Text('Breakfast'), Text('Lunch'),Text('Dinner')),
+            // TableCell(
+            //     child: Padding(
+            //         padding: EdgeInsets.all(5), child: Row(children: [Text('Day'), Text('Breakfast'), Text('Lunch'),Text('Dinner')],))),
             TableCell(
                 child: Padding(
                     padding: EdgeInsets.all(5), child: Text(WeeklyWidget.day))),
             TableCell(
                 child: Padding(
                     padding: EdgeInsets.all(5),
-                    child: Text(WeeklyWidget.breakfast))),
+                    child: DropdownButton<String>(
+                      items: WeeklyWidget.breakfast
+                          .map((item) => DropdownMenuItem<String>(
+                                value: item as String,
+                                child: Text(item),
+                              ))
+                          .toList(),
+                      onChanged: (String? newValue) {},
+                    ))),
             TableCell(
                 child: Padding(
                     padding: EdgeInsets.all(5),
-                    child: Text(WeeklyWidget.lunch))),
+                    child: DropdownButton<String>(
+                      items: WeeklyWidget.lunch
+                          .map((item) => DropdownMenuItem<String>(
+                                value: item as String,
+                                child: Text(item),
+                              ))
+                          .toList(),
+                      onChanged: (String? newValue) {},
+                    ))),
             TableCell(
                 child: Padding(
                     padding: EdgeInsets.all(5),
-                    child: Text(WeeklyWidget.dinner))),
+                    child: DropdownButton<String>(
+                      items: WeeklyWidget.dinner
+                          .map((item) => DropdownMenuItem<String>(
+                                value: item as String,
+                                child: Text(item),
+                              ))
+                          .toList(),
+                      onChanged: (String? newValue) {},
+                    ))),
           ]);
         }).toList(),
       ),

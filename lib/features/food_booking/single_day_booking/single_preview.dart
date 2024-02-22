@@ -5,10 +5,16 @@ import 'package:seeroo_erp/foundation/sp_solid_button/sp_solid_button.dart';
 import 'package:seeroo_erp/theme/colors/colors.dart';
 import 'package:seeroo_erp/theme/strings/strings.dart';
 
+// import '../../../controller/datecontroller.dart';
 import '../../bottom_nav/bottom_nav_page.dart';
 
 class SinglePreview extends StatelessWidget {
-  const SinglePreview({super.key});
+  SinglePreview({super.key});
+  // final ReservationController controller = Get.find<ReservationController>();
+
+// final reservationcontroller = Get.find<ReservationController>();
+// reservationcontroller.updateSelectedDate(selectedDate);
+
 
   @override
   Widget build(BuildContext context) {
@@ -40,19 +46,25 @@ class SinglePreview extends StatelessWidget {
                   BoxShadow(color: AppColor.whites),
                 ],
               ),
-              child: const Text('16/01/2024'),
+              child: Text('16/02/2024'),
+              // child:  Text(controller.selectedDate != null ? controller.selectedDate!.toString() : 'No date selected'),
             ),
             const SizedBox(height: 12.0),
             const SinglePreviewCard(),
             const SizedBox(height: 12.0),
-            SPSolidButton(
-                btntext: Strings.submit,
-                onpressed: () {
-                  Get.to(() => BottomNavPage());
-                })
+            Align(
+              alignment: Alignment.centerRight,
+              child: SPSolidButton(
+                  btntext: Strings.submit,
+                  onpressed: () {
+                    Get.to(() => BottomNavPage());
+                  }, btnwidth: MediaQuery.of(context).size.width/3.5,),
+            )
           ],
         ),
       ),
     );
   }
 }
+
+// final DateController = Get.put(ReservationController()); 

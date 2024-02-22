@@ -48,11 +48,14 @@ class _SinglePreviewCardState extends State<SinglePreviewCard> {
             thickness: 1,
           ),
           const SizedBox(height: 12.0),
-          const Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Total: 120',
-              textAlign: TextAlign.end,
+          Padding(
+            padding: const EdgeInsets.only(right: 50.0),
+            child: const Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Total: 120',
+                textAlign: TextAlign.end,
+              ),
             ),
           ),
           const SizedBox(height: 12.0),
