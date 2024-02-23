@@ -7,14 +7,17 @@ class Strings {
   static const String next = 'NEXT';
   static const String date = 'Date';
   static const String submit = 'SUBMIT';
+   static const String fromdate = 'From Date';
+    static const String todate = 'To Date';
     
 }
 
 // carousel_images.dart
 class CarouselImages {
   static const List<String> loginImages = [
-    'assets/images/login1.png',
-    'assets/images/login2.png',
+    'assets/images/Computer login-rafiki.svg',
+    'assets/images/Clip path group.svg',
+    'assets/images/Office work.svg',
   ];
 }
 

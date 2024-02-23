@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:seeroo_erp/features/food_booking/single_day_booking/single_preview.dart';
+import 'package:seeroo_erp/features/food_booking/weekly_booking/weekly_preview.dart';
 import 'package:seeroo_erp/foundation/date_field/date_field.dart';
-import 'package:seeroo_erp/foundation/single_booking_card/single_booking_card.dart';
 import 'package:seeroo_erp/foundation/sp_solid_button/sp_solid_button.dart';
 import 'package:seeroo_erp/foundation/weekly_booking_card/weekly_booking_card.dart';
 import 'package:seeroo_erp/theme/strings/strings.dart';
@@ -35,22 +35,18 @@ class _WeeklyReservationState extends State<WeeklyReservation> {
                 Row(
                   children: [
                     SizedBox(
-                      width: MediaQuery.of(context).size.width/2.4,
-                      child: const Column(
-                        children: [
-                          Text('From'),
-                          DateField(),
-                        ],
+                      width: MediaQuery.of(context).size.width / 2.4,
+                      child: const DateField(
+                        titleDate: Strings.fromdate,
                       ),
                     ),
-                    const SizedBox(width: 15,),
+                    const SizedBox(
+                      width: 15,
+                    ),
                     SizedBox(
-                      width: MediaQuery.of(context).size.width/2.4,
-                      child: const Column(
-                        children: [
-                          Text('To'),
-                          DateField(),
-                        ],
+                      width: MediaQuery.of(context).size.width / 2.4,
+                      child: const DateField(
+                        titleDate: Strings.todate,
                       ),
                     )
                   ],
@@ -58,15 +54,19 @@ class _WeeklyReservationState extends State<WeeklyReservation> {
                 const SizedBox(
                   height: 15.0,
                 ),
-                WeeklyBookingCard(),
+                const WeeklyBookingCard(),
                 const SizedBox(
                   height: 15.0,
                 ),
-                SPSolidButton(
-                  btntext: Strings.next,
-                  onpressed: () {
-                    Get.to(() => const SinglePreview());
-                  },
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: SPSolidButton(
+                    btntext: Strings.next,
+                    onpressed: () {
+                      Get.to(() => const WeeklyPreview());
+                    },
+                    btnwidth: MediaQuery.of(context).size.width / 4,
+                  ),
                 )
               ],
             ),
