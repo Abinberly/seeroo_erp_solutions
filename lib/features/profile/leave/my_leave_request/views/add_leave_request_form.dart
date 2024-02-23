@@ -1,8 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:seeroo_erp/features/profile/leave/my_leave_request/controller/add_leave_request_controller.dart';
 import 'package:seeroo_erp/foundation/date_field/date_field.dart';
 import 'package:seeroo_erp/foundation/sp_solid_button/sp_solid_button.dart';
+import 'package:seeroo_erp/theme/app_text_styles/app_text_styles.dart';
 
 class AddLeaveRequestForm extends StatelessWidget {
   const AddLeaveRequestForm({Key? key}) : super(key: key);
@@ -50,23 +54,40 @@ class AddLeaveRequestForm extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20), // Adjust spacing as needed
-                  TextFormField(
-                    controller: controller.leaveReasonController,
-                    decoration: InputDecoration(
-                      labelText: 'Leave Reason',
-                      border: OutlineInputBorder(),
+
+                  SizedBox(
+                    height: 150,
+                    child: TextFormField(
+                      controller: controller.leaveReasonController,
+                      decoration: InputDecoration(
+                        // labelText: 'Description',
+                        hintText: "Description",
+                        border: OutlineInputBorder(),
+                       
+                      ),
+                        textAlign: TextAlign.start,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter leave reason';
+                        }
+                        return null;
+                      },
+                      maxLines: 4,
                     ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter leave reason';
-                      }
-                      return null;
-                    },
                   ),
                   SizedBox(height: 20), // Adjust spacing as needed
-                  SPSolidButton(
-                    btntext: 'Save',
-                    onpressed: () => {controller.submitLeaveRequest()}, btnwidth: Get.width*0.2,
+                  Row(mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      SPSolidButton(
+                        btntext: 'Save',
+                        onpressed: () => {controller.submitLeaveRequest()}, btnwidth: MediaQuery.of(context).size.width/4,
+                      ),
+                      SizedBox(width: 10,),
+                      SPSolidButton(
+                        btntext: 'Discard',
+                        onpressed: () => {controller.clearForm()}, btnwidth: MediaQuery.of(context).size.width/4,
+                      ),
+                    ],
                   ),
                 ],
               ),

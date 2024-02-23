@@ -10,7 +10,7 @@ class SPSolidButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 45,
       width: btnwidth,
       child: ButtonTheme(
         child: ElevatedButton(
@@ -26,3 +26,5 @@ class SPSolidButton extends StatelessWidget {
     );
   }
 }
+
+

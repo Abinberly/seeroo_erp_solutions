@@ -28,4 +28,12 @@ class AddLeaveRequestController extends GetxController {
       // Show error message
     }
   }
+
+// Method to clear the form fields
+  void clearForm() {
+    nameController.clear();
+    startDateController.clear();
+    endDateController.clear();
+    leaveReasonController.clear();
+  }
 }
